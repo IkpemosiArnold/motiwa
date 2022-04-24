@@ -4,27 +4,27 @@
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>motiwa.online</title> 
-       <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="lightstyle.css">
     </head>
     <body>
-        <div class="lang-select spectral-font white">
-            <p class="lang">EN</p>
-            <p class="lang">FR</p>
+        <div class="lang-select spectral-font">
+            <p class="lang"  onclick="toggleLanguage('English')">EN</p>
+            <p class="lang"  onclick="toggleLanguage('French')">FR</p>
         </div>
-    <main class="content-anglais">
+    <main id="content-anglais" class="display-on">
       <div id="intro-strip">
-        <div id="intro-strip-1 text-center">
-            <p class="hahmlet-font intro-desc white">
+        <div class="intro-strip-1 text-center">
+            <p class="hahmlet-font intro-desc ">
                 An at-service digital experience studio; We are interested in getting everyone online.
                  We work with brands and individuals to design and build immersive digital experiences. 
             </p>
         </div>
-        <div id="intro-strip-2" class="text-center white">
-            <h1 class="spectral-font" id="motiwa-span"><span>mo-ti-wa.online</span></h1>
+        <div class=" intro-strip-2 text-center">
+            <h1 class="spectral-font" id="motiwa-span"><span>mò-ti-wá.online</span></h1>
             <p class="archivo-font" id="motiwa-span-desc">Portmanteau of Yorùbá and English  that means <span class="italics">“I have come online”</span></p>
         </div>
         </div>
-        <div id="services-desc" class="black">
+        <div id="services-desc" class="white">
           <p id="service-intro" class="hahmlet-font">Building and curating an online presence you’ll love and  be proud of.</p>
           <ul class="hahmlet-font" id="service-list">
             <li>Strategy Consulting</li>
@@ -35,7 +35,7 @@
             
           </ul>
         </div>
-        <div id="connect-with-us" class="hahmlet-font white">
+        <div id="connect-with-us" class="hahmlet-font">
             <div id="connect-strip">
                 <p>Enquiries ? <a href="mailto:hello@motiwa.online">hello@motiwa.online</a></p> 
             </div>
@@ -47,48 +47,74 @@
              </ul>
           
         </div>
+        <footer class="container__footer text-center hahmlet-font">
+            <p>2022, motiwa{v1}</p>
+         </footer>
     </main>
-    <main class="content-francais">
+    <main id="content-francais" class="display-off">
         <div id="intro-strip">
-        <div id="intro-strip-1 text-center">
-            <p class="hahmlet-font intro-desc white">
+        <div class="intro-strip-1 text-center">
+            <p class="hahmlet-font intro-desc">
                 Une immersion numérique créative et humaine. Chez motiwa.online, 
                 nous vous accompagnons dans la conception d’expériences digitales uniques et toujours orientées
                 business. 
             </p>
         </div>
-        <div id="intro-strip-2" class="text-center white">
-            <h1 class="spectral-font" id="motiwa-span"><span>mo-ti-wa.online</span></h1>
+        <div class="intro-strip-2 text-center">
+            <h1 class="spectral-font" id="motiwa-span"><span>mò-ti-wá.online</span></h1>
             <p class="archivo-font" id="motiwa-span-desc">Portmanteau of Yorùbá and English  that means <span class="italics">“I have come online”</span></p>
         </div>
         </div>
-        <div id="services-desc" class="black">
-          <p id="service-intro" class="hahmlet-font">Offrez-vous une présence en ligne en accord 
-              avec votre cible et créez une communauté forte et engagée.</p>
-          <ul class="hahmlet-font" id="service-list">
-            <li>Conseil en stratégie</li>
-            <li>Community management</li>
-            <li>Branding</li>
-            <li>SEO & SEA</li>
-            <li>Conception et développement web</li>
-            
-          </ul>
+        <div id="second-part">
+            <div id="services-desc" class="white">
+                <p id="service-intro" class="hahmlet-font">Offrez-vous une présence en ligne en accord 
+                    avec votre cible et créez une communauté forte et engagée.</p>
+                <ul class="hahmlet-font" id="service-list">
+                  <li>Conseil en stratégie</li>
+                  <li>Community management</li>
+                  <li>Branding</li>
+                  <li>SEO & SEA</li>
+                  <li>Conception et développement web</li>
+                  
+                </ul>
+              </div>
+              <div id="connect-with-us" class="hahmlet-font">
+                  <div id="connect-strip">
+                      <p>Enquiries ? <a href="mailto:hello@motiwa.online">hello@motiwa.online</a></p> 
+                  </div>
+             
+                   <ul id="socials-list">
+                       <li class="social-item">telegram</li>
+                       <li class="social-item">instagram</li>
+                       <li class="social-item">twitter</li>
+                   </ul>
+                
+              </div>
+              <footer class="container__footer text-center hahmlet-font">
+                <p>2022, motiwa{v1}</p>
+             </footer>
         </div>
-        <div id="connect-with-us" class="hahmlet-font white">
-            <div id="connect-strip">
-                <p>Enquiries ? <a href="mailto:hello@motiwa.online">hello@motiwa.online</a></p> 
-            </div>
-       
-             <ul id="socials-list">
-                 <li class="social-item">telegram</li>
-                 <li class="social-item">instagram</li>
-                 <li class="social-item">twitter</li>
-             </ul>
-          
-        </div>
+        
     </main>
-    <footer class="container__footer text-center hahmlet-font white">
-       <p>2022, motiwa{v1}</p>
-    </footer>
+    
     </body>
+    <script>
+        function toggleLanguage(language) {
+            let french = document.getElementById("content-francais");
+            let english = document.getElementById("content-anglais");
+            if (language === "French") {
+     
+                french.classList.remove("display-off");
+                french.classList.add("display-on");
+                english.classList.add("display-off");
+                english.classList.remove("display-on");
+            }
+            else if (language === "English") {
+                english.classList.remove("display-off");
+                english.classList.add("display-on");
+                french.classList.add("display-off");
+                french.classList.remove("display-on");
+            }  
+        }
+    </script>
 </html>

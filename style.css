@@ -25,14 +25,15 @@ body{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    justify-content: space-between;
     background: #000000;
 }
 main{
     flex-grow: 1;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+}
+#second-part{
+    background-color: #00b4d8;
 }
 .spectral-font{
     font-family: 'Spectral', serif;
@@ -70,11 +71,11 @@ main{
     margin-bottom: 4%;
     justify-content: space-around;
 }
-#intro-strip-1{
+.intro-strip-1{
     width: 40%;
     
 }
-#intro-strip-2{
+.intro-strip-2{
     width: 40%;
     align-self: center;
   
@@ -84,15 +85,15 @@ main{
     max-inline-size:  30ch;
     
 }
-#intro-strip-2>h1{
+.intro-strip-2>h1{
     font-size: calc(2rem + 2vw);
 }
 #motiwa-span>span{
-   background-color: #16db65;
+   background-color: #00b4d8;
 }
 
 #services-desc{
-    background-color: #16db65;
+    background-color: #00b4d8;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -125,7 +126,7 @@ main{
 }
 #connect-strip>p>a{
     text-decoration: none;
-    color: #16db65;
+    color: #03045e;
     text-decoration: underline;
     -webkit-text-underline-position: under;
     text-underline-position: under;
@@ -152,15 +153,18 @@ display: inline-flex;
         justify-content: center;
         align-items: center;
         align-content: center;
+     
     }
-    #intro-strip-1{
+    .intro-strip-1{
         width:100vw;
         padding: 0;
+        order: 2;
       
     }
-    #intro-strip-2{
+    .intro-strip-2{
         width:100vw;
         padding: 0;
+        order: 1;
     }
     .intro-desc{
         font-size: calc(0.8rem + 1vw);
@@ -169,13 +173,15 @@ display: inline-flex;
         
     }
     #motiwa-span{
-        font-size: calc(1rem + 2vw);
+        font-size: calc(2rem + 2vw);
+       
     }
     #motiwa-span-desc{
         font-size: calc(0.5rem + 1vw);
     }
    
     #services-desc{
+      
         justify-content: center;
         align-items: center;
         align-content: center;
@@ -219,4 +225,23 @@ display: inline-flex;
 }
 .content-anglais{
     display: none;
+}
+
+@media(max-width:425px){
+#motiwa-span-desc{
+    display: none;
+}
+#motiwa-span{
+    font-size: calc(2.5rem + 2vw);
+
+}
+#service-intro{
+    font-weight: bold;
+}
+body{
+    justify-content: space-between;
+}
+main{
+    justify-content: space-between;
+}
 }

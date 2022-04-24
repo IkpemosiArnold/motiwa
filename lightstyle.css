@@ -27,9 +27,7 @@ body{
     height: 100vh;
     justify-content: space-between;
 }
-main{
-    flex-grow: 1;
-}
+
 .spectral-font{
     font-family: 'Spectral', serif;
 }
@@ -56,6 +54,7 @@ main{
     justify-content: center;
     font-weight: bold;
     padding: 20px;
+    cursor: pointer;
 }
 .lang{
     padding: 20px;
@@ -66,21 +65,21 @@ main{
     margin-bottom: 4%;
     justify-content: space-around;
 }
-#intro-strip-1{
+.intro-strip-1{
     width: 40%;
     
 }
-#intro-strip-2{
+.intro-strip-2{
     width: 40%;
     align-self: center;
   
 }
 .intro-desc{
-    font-size: calc(0.8rem + 1vh);
+    font-size: calc(0.8rem + 1vw);
     max-inline-size:  30ch;
     
 }
-#intro-strip-2>h1{
+.intro-strip-2>h1{
     font-size: calc(2rem + 2vw);
 }
 #intro-strip-2>h1>span{
@@ -140,15 +139,18 @@ display: inline-flex;
         justify-content: center;
         align-items: center;
         align-content: center;
+     
     }
-    #intro-strip-1{
+    .intro-strip-1{
         width:100vw;
         padding: 0;
+        order: 2;
       
     }
-    #intro-strip-2{
+    .intro-strip-2{
         width:100vw;
         padding: 0;
+        order: 1;
     }
     .intro-desc{
         font-size: calc(0.8rem + 1vw);
@@ -157,13 +159,15 @@ display: inline-flex;
         
     }
     #motiwa-span{
-        font-size: calc(1rem + 2vw);
+        font-size: calc(2rem + 2vw);
+       
     }
     #motiwa-span-desc{
         font-size: calc(0.5rem + 1vw);
     }
    
     #services-desc{
+      
         justify-content: center;
         align-items: center;
         align-content: center;
@@ -204,6 +208,31 @@ display: inline-flex;
     justify-content:center;
     
     }
+}
+
+.display-off{
+    display: none;;
+}
+.display-on{
+    flex-grow: 1;
+}
+@media(max-width:425px){
+#motiwa-span-desc{
+    display: none;
+}
+#motiwa-span{
+    font-size: calc(2.5rem + 2vw);
+
+}
+#service-intro{
+    font-weight: bold;
+}
+body{
+    justify-content: space-between;
+}
+main{
+    justify-content: space-between;
+}
 }
 
 /*-------Animations--------*/
