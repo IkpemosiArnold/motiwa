@@ -16,6 +16,13 @@
     <link href="assets/css/style.css" rel="stylesheet" />
 
     <title>mò-ti-wá</title>
+
+    <script>
+      let language = navigator.language;
+      let html = document.getElementsByTagName("html");
+      html.lang = language;
+      console.log(html.lang);
+    </script>
   </head>
   <body>
     <!-- overlay -->
@@ -29,24 +36,24 @@
       <!-- top bar -->
       <div class="topbar">
         <!-- language-switch -->
-        <p class="space-right">EN</p>
-        <p>FR</p>
+        <p class="space-right lang-en">EN</p>
+        <p class="lang-fr">FR</p>
       </div>
       <div class="main-section">
         <!-- links -->
         <div class="links">
           <ul>
-            <li>
+            <!--<li>
               <a href="#">instagram</a>
             </li>
             <li>
-              <a href="#">telegram</a>
+              <a href="#">WhatsApp</a>
             </li>
             <li>
               <a href="#">facebook</a>
-            </li>
+            </li>-->
             <li>
-              <a href="#">twitter</a>
+              <a href="https://wa.me/message/WTC6Z5ONI6P2O1">WhatsApp</a>
             </li>
           </ul>
         </div>
@@ -56,7 +63,9 @@
           <span class="mot-mini">®</span>
         </div>
         <!-- sub-text -->
-        <p class="sub-text">Portmanteau of Yorùbá and English that means “I have come online”.</p>
+        <p class="sub-text">
+          Portmanteau of Yorùbá and English that means “I have come online”.
+        </p>
       </div>
       <br />
       <br />
@@ -64,9 +73,13 @@
       <div class="service-section">
         <img class="service-back" src="assets/images/motiwa_2.png" alt="" />
         <p class="service-header">
-          An at-service digital experience studio; We are interested in getting everyone online. We work with brands and individuals to design and build immersive digital experiences.
+          An at-service digital experience studio; We are interested in getting
+          everyone online. We work with brands and individuals to design and
+          build immersive digital experiences.
         </p>
-        <p class="service-text">Building and curating an online presence you'll love and be proud of.</p>
+        <p class="service-text">
+          Building and curating an online presence you'll love and be proud of.
+        </p>
         <div class="service-list">
           <div class="service-space">
             <h1 class="service-num">01.</h1>
@@ -79,13 +92,13 @@
           <div class="service-space">
             <h1 class="service-num">03.</h1>
             <p class="services">
-              Digital Design Branden and<br />
+              Digital Design, Branding and<br />
               Creative Direction
             </p>
           </div>
           <div class="service-space">
             <h1 class="service-num">04.</h1>
-            <p class="services">Digital Marketing Web Design and Development</p>
+            <p class="services">Digital Marketing</p>
           </div>
           <div class="service-space">
             <h1 class="service-num">05.</h1>
@@ -97,12 +110,14 @@
       <div class="email-section">
         <div class="email-content">
           <h1 class="email-header">
-            We Make <br />
-            Things Look <br />
-            Good. <br />
+            Let us <br />
+            Get you <br />
+            Online. <br />
           </h1>
           <p class="email-text">Talk to us now</p>
-          <a class="email-link" href="mailto:hello@motiwa.online">hello@motiwa.online</a>
+          <a class="email-link" href="mailto:hello@motiwa.online"
+            >hello@motiwa.online</a
+          >
         </div>
       </div>
       <!-- footer -->
